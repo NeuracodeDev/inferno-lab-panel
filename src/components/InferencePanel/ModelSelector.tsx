@@ -23,7 +23,7 @@ const ModelSelector = ({
 
   return (
     <div className={cn("flex flex-col gap-1 w-full", className)}>
-      <label htmlFor="model-select" className="text-sm text-neutral-400 font-medium">
+      <label htmlFor="model-select" className="text-sm text-blue-300 font-medium">
         Model/Checkpoint:
       </label>
       <div className="relative">
@@ -31,7 +31,7 @@ const ModelSelector = ({
           id="model-select"
           value={selectedModel}
           onChange={(e) => onModelChange(e.target.value)}
-          className="w-full bg-[#101418] text-[#D0D0D0] px-3 py-2 rounded-md border border-neutral-800 appearance-none focus:outline-none focus:ring-1 focus:ring-green-600 focus:border-green-600"
+          className="w-full bg-[#081221] text-cyan-100 px-3 py-2 rounded-md border border-[#1A365D] appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 shadow-[0_0_5px_rgba(66,153,225,0.15)]"
         >
           {models.map((model) => (
             <option key={model} value={model}>
@@ -40,7 +40,7 @@ const ModelSelector = ({
           ))}
         </select>
         <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-          <ChevronDown className="h-4 w-4 text-neutral-400" />
+          <ChevronDown className="h-4 w-4 text-blue-400" />
         </div>
       </div>
     </div>

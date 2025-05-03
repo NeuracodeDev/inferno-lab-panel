@@ -61,13 +61,17 @@ const ImageInput = ({ image, onImageChange, className }: ImageInputProps) => {
 
   return (
     <div className={cn("flex flex-col gap-1 w-full", className)}>
-      <label className="text-sm text-neutral-400 font-medium">
+      <label className="text-sm text-blue-300 font-medium">
         Input Image:
       </label>
       <div
         className={cn(
           "w-full h-32 border-2 border-dashed rounded-md flex flex-col items-center justify-center cursor-pointer transition-colors",
-          image ? "border-green-700 bg-green-900/10" : isDragging ? "border-blue-500 bg-blue-900/20" : "border-neutral-700 bg-[#101418] hover:bg-neutral-800/50"
+          image 
+            ? "border-cyan-700/70 bg-cyan-900/10 shadow-[0_0_8px_rgba(66,153,225,0.2)]" 
+            : isDragging 
+              ? "border-blue-500/70 bg-blue-900/20 shadow-[0_0_8px_rgba(66,153,225,0.3)]" 
+              : "border-[#1A365D]/60 bg-[#081221]/70 hover:bg-[#0F2942]/50 shadow-[0_0_5px_rgba(66,153,225,0.1)]"
         )}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
@@ -77,10 +81,10 @@ const ImageInput = ({ image, onImageChange, className }: ImageInputProps) => {
         {image ? (
           <div className="relative w-full h-full p-2">
             <button 
-              className="absolute top-1 right-1 p-1 bg-neutral-800 rounded-full hover:bg-red-900 z-10"
+              className="absolute top-1 right-1 p-1 bg-[#081221]/90 rounded-full hover:bg-red-900/80 z-10 shadow-[0_0_5px_rgba(66,153,225,0.3)]"
               onClick={clearImage}
             >
-              <X size={16} className="text-neutral-200" />
+              <X size={16} className="text-blue-200" />
             </button>
             <img 
               src={image} 
@@ -90,8 +94,8 @@ const ImageInput = ({ image, onImageChange, className }: ImageInputProps) => {
           </div>
         ) : (
           <>
-            <Upload className="w-8 h-8 text-neutral-500" />
-            <p className="mt-2 text-sm text-neutral-400">Upload Image or Drag & Drop</p>
+            <Upload className="w-8 h-8 text-blue-400" />
+            <p className="mt-2 text-sm text-blue-300">Upload Image or Drag & Drop</p>
           </>
         )}
         <input

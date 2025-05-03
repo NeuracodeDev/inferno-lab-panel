@@ -18,12 +18,12 @@ const ConfidenceBar = ({ predictions }: ConfidenceBarProps) => {
     <div className="space-y-2 w-full">
       {sortedPredictions.map((prediction) => (
         <div key={prediction.label} className="flex items-center">
-          <div className="w-20 text-sm text-right pr-2 text-[#D0D0D0]">
+          <div className="w-20 text-sm text-right pr-2 text-blue-200">
             {prediction.label}
           </div>
-          <div className="flex-1 h-6 bg-[#101418] rounded overflow-hidden">
+          <div className="flex-1 h-6 bg-[#081221] rounded-md overflow-hidden border border-[#1A365D]/40">
             <div
-              className="h-full bg-blue-600 flex items-center justify-end px-2 text-xs text-white"
+              className="h-full bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-end px-2 text-xs text-white shadow-[0_0_8px_rgba(66,153,225,0.4)]"
               style={{ width: `${prediction.confidence * 100}%` }}
             >
               {(prediction.confidence * 100).toFixed(1)}%

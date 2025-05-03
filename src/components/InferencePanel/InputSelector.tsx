@@ -23,8 +23,8 @@ const InputSelector = ({
         className={cn(
           "flex items-center gap-2 px-4 py-2 rounded-md transition-colors",
           selectedType === "text"
-            ? "bg-[#2E7D32] text-white"
-            : "bg-[#101418] text-[#D0D0D0] hover:bg-neutral-800"
+            ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-[0_0_8px_rgba(66,153,225,0.4)]"
+            : "bg-[#081221]/70 text-blue-300 hover:bg-[#0F2942] border border-[#1A365D]/40"
         )}
       >
         <FileText size={18} />
@@ -35,8 +35,8 @@ const InputSelector = ({
         className={cn(
           "flex items-center gap-2 px-4 py-2 rounded-md transition-colors",
           selectedType === "image"
-            ? "bg-[#2E7D32] text-white"
-            : "bg-[#101418] text-[#D0D0D0] hover:bg-neutral-800"
+            ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-[0_0_8px_rgba(66,153,225,0.4)]"
+            : "bg-[#081221]/70 text-blue-300 hover:bg-[#0F2942] border border-[#1A365D]/40"
         )}
       >
         <FileImage size={18} />

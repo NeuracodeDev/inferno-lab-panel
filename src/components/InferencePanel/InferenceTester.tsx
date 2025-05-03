@@ -101,7 +101,7 @@ const InferenceTester = () => {
               `}
             >
               <Play size={18} />
-              <span>⚡ Run Inference</span>
+              <span>Run Inference</span>
             </button>
             
             <button
